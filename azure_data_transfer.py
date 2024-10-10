@@ -27,13 +27,11 @@ class AzureAccount():
     file_system: FileSystemClient
 
     def __init__(self):
-        self.azureResourceGroup = "SolEng"
-        self.azureStorageAccount = "stsolengdatalake"
-        self.azureContainerName = "lab2fabcontainer"
+        self.azureResourceGroup = "<RESOURCE_GROUP>"
+        self.azureStorageAccount = "<STORAGE_ACCOUNT"
+        self.azureContainerName = "<CONTAINER_NAME>"
 
-        self.SASToken = 
-"sp=racwdlm&st=2024-07-17T16:05:54Z&se=2024-08-01T00:05:54Z&spr=https&sv=2022-11-02&sr=c&sig=Dz05ZufqlTpOx1lSt8m5w%2FSXamKMlbNOWKJXTmgggTo%3D"
-
+	self.SASToken = "<TOKEN>"
         print("Create data lake service client...")
         service = DataLakeServiceClient("https://{}.dfs.core.windows.net/".format(self.azureStorageAccount), credential=self.SASToken)
 
@@ -58,9 +56,9 @@ class ViamCloudData():
     azure_account: AzureAccount
 
     def __init__(self, azure_account: AzureAccount):
-        self.api_key = "3efva0eae0ofbdv5uddjzofngfab1xcm"
-        self.api_key_id = "22d19d16-fbd8-45e6-8bfe-dc89ef029c36"
-        self.outdir = "/Users/jeremyhyde/Downloads/test"
+        self.api_key = "<API_KEY>"
+        self.api_key_id = "<API_KEY_ID>"
+        self.outdir = "<OUTPut_DIRECTORY>"
         self.save_images = True
 
         self.azure_account = azure_account
